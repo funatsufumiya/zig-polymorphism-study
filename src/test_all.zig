@@ -4,4 +4,5 @@ comptime {
     _ = @import("lib3.zig");
     _ = @import("lib4.zig");
     _ = @import("lib5.zig");
+    _ = @import("lib6.zig");
 }
