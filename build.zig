@@ -16,10 +16,10 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const lib = b.addStaticLibrary(.{
-        .name = "250118_poly",
+        .name = "zig_polymorphism_study",
         // In this case the main source file is merely a path, however, in more
         // complicated build scripts, this could be a generated file.
-        .root_source_file = b.path("src/lib.zig"),
+        .root_source_file = b.path("src/lib6.zig"),
         .target = target,
         .optimize = optimize,
     });
@@ -30,7 +30,7 @@ pub fn build(b: *std.Build) void {
     b.installArtifact(lib);
 
     const exe = b.addExecutable(.{
-        .name = "250118_poly",
+        .name = "zig_polymorphism_study",
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,

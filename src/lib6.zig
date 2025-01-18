@@ -1,7 +1,7 @@
 const std = @import("std");
 const testing = std.testing;
 
-const Animal = struct {
+pub const Animal = struct {
     vtable: *const VTable,
     instance: *anyopaque,
 
@@ -44,7 +44,7 @@ const Animal = struct {
     }
 };
 
-const Cat = struct {
+pub const Cat = struct {
     name_str: []const u8,
 
     pub fn voice(_: *const Cat) []const u8 {
@@ -60,7 +60,7 @@ const Cat = struct {
     }
 };
 
-const Dog = struct {
+pub const Dog = struct {
     name_str: []const u8,
 
     pub fn voice(_: *const Dog) []const u8 {
